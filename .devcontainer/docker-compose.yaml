@@ -1,0 +1,10 @@
+version: '3'
+
+services: 
+
+  golang:
+    build: golang
+    volumes: 
+      - ..:/go/src/github.com/YukiBobier/practice-grpc-chat
+    # without this, build fail
+    tty: true
