@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package chat;
+
+message Message {
+  string name = 1;
+  // It will be ignored when posting the message.
+  google.protobuf.Timestamp posted_at = 2;
+  string body = 3;
+}
+
+message PostResponse {}
+
+message SubscribeRequest {}
+
+service ChatService {
+  rpc Post(Message) returns (PostResponse);
+  rpc Subscribe(SubscribeRequest) returns (stream Message);
+}
