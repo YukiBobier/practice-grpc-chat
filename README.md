@@ -28,3 +28,6 @@ If you want to run it to a specific address and/or use a particular name:
 ```
 go run ./client -address 0.0.0.0:50052 -name Hoge
 ```
+
+## How the chat works
+![How the chat works](assets/how_the_chat_works.jpg)
