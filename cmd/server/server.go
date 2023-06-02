@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 
 	pb "github.com/YukiBobier/practice-grpc-chat/internal/chat"
@@ -22,7 +21,7 @@ func (s *chatServiceServer) Post(ctx context.Context, message *pb.Message) (*pb.
 	log.Printf("`Post` is called: message (%v)\n", message)
 
 	if err := ctx.Err(); err != nil {
-		fmt.Printf("`Post` is cancelled: %v", err)
+		log.Printf("`Post` is cancelled: %v", err)
 		return nil, nil
 	}
 
@@ -37,7 +36,7 @@ func (s *chatServiceServer) Subscribe(req *pb.SubscribeRequest, stream pb.ChatSe
 
 	ctx := stream.Context()
 	if err := ctx.Err(); err != nil {
-		fmt.Printf("`Subscribe` is cancelled: %v", err)
+		log.Printf("`Subscribe` is cancelled: %v", err)
 		return nil
 	}
 
