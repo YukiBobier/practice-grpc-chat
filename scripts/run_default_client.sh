@@ -1,3 +1,3 @@
 #!/bin/bash
 
-go run ./client
+go run ./cmd/client

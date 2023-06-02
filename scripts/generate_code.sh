@@ -15,4 +15,4 @@ generate_code() {
     ${IN}
 }
 
-generate_code proto/chat.proto . chat
+generate_code proto/chat.proto . internal/chat
