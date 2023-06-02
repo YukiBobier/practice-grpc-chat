@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/YukiBobier/practice-grpc-chat/chat"
+	pb "github.com/YukiBobier/practice-grpc-chat/internal/chat"
 	"github.com/marcusolsson/tui-go"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

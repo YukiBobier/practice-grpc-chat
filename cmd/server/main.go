@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/YukiBobier/practice-grpc-chat/chat"
+	pb "github.com/YukiBobier/practice-grpc-chat/internal/chat"
 	"google.golang.org/grpc"
 )
 
